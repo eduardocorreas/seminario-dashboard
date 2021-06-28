@@ -28,14 +28,12 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "LaravelFrontendPresets\\NowUiPreset\\": "presets/NowUi/src"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/",
-            "LaravelFrontendPresets\\NowUiPreset\\": "presets/NowUi/src"
+            "Tests\\": "tests/"
         }
     },
     "scripts": {

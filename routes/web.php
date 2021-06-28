@@ -19,4 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/panel/admin',[
+    'as' => 'panel-admin',
+    'uses' => 'HomeController@panelAdmin']);
+
+Route::get('/panel/admin/seminarians',[
+    'as' => 'seminarians',
+    'uses' => 'SeminariansController@index']);
+
+
