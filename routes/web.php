@@ -32,6 +32,14 @@ Route::get('/panel/seminarian',[
     'uses' => 'SeminariansController@index']);
 
 
+Route::get('/seminarians',[
+    'as' => 'seminarians',
+    'uses' => 'SeminariansController@index']);
+
+Route::get('/delete-seminarian',[
+    'as' => 'delete-seminarian',
+    'uses' => 'SeminariansController@delete']);
+
 Route::get('/panel/my-complaints',[
     'as' => 'my-complaint',
     'uses' => 'ComplaintController@myComplaints']);
@@ -47,5 +55,22 @@ Route::get('/store-complaint-visualized/{id}',[
 Route::get('/delete-complaint/{id}',[
     'as' => 'delete-complaint',
     'uses' => 'ComplaintController@delete']);
+
+
+Route::get('/attendances/{user_id}',[
+    'as' => 'attendances',
+    'uses' => 'AttendanceController@index']);
+
+Route::post('/store-attendance',[
+    'as' => 'store-attendance',
+    'uses' => 'AttendanceController@store']);
+
+Route::get('/attendance-detail/{id}',[
+    'as' => 'attendance-detail',
+    'uses' => 'AttendanceController@show']);
+
+Route::get('/delete-attendance/{id}',[
+    'as' => 'delete-attendance',
+    'uses' => 'AttendanceController@delete']);
 
 

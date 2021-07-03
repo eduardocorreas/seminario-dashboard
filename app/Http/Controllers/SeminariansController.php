@@ -12,6 +12,14 @@ class SeminariansController extends Controller
 
         $seminarians = User::where('type_user', '=', 1)->get();
 
-        return view('seminarian.home', compact($data));
+        return view('admin.seminarians', compact($data));
+    }
+
+    public function delete(Request $request){
+
+        $seminarian = User::find($request);
+        $seminarian->delete();
+
+        return back();
     }
 }

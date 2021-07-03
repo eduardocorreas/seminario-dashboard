@@ -8,8 +8,7 @@
       <div class="col-md-6">
         <div class="card  card-tasks">
           <div class="card-header ">
-            <h5 class="card-category">Backend development</h5>
-            <h4 class="card-title">Tasks</h4>
+            <h4 class="card-title">Seminaristas</h4>
           </div>
           <div class="card-body ">
             <div class="table-full-width table-responsive">
