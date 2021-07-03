@@ -216,13 +216,38 @@
 
                 </div>
 
-                <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                    <label>About Me</label>
-                    <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <h6>Vida em família</h6>
+                        <p>Utilize o campo abaixo para responder as seguintes perguntas:</p>
+                        <ul>
+                            <li>Você reside com seus pais?</li>
+                            <li>Eles sofrem de alguma doença?</li>
+                            <li>Como é sua relação com eles?</li>
+                            <li>São casados na Igreja?</li>
+                            <li>O que eles pensam da sua vocação?</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea id="family_description" name="family_description" rows="5" cols="80" class="form-control" placeholder="Responda aqui"></textarea>
+                        </div>
                     </div>
                 </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <h6>Saúde</h6>
+                        <p>Utilize o campo abaixo para responder as seguintes perguntas:</p>
+                        <ul>
+                            <li>Você goza de boa saúde?</li>
+                            <li>Que doenças já teve?</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea id="live_description" name="live_description" rows="5" cols="80" class="form-control" placeholder="Responda aqui"></textarea>
+                        </div>
+                    </div>
                 </div>
             </form>
             </div>
