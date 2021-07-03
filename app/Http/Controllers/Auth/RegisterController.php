@@ -9,6 +9,7 @@ use App\Models\VocationalRecord;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -30,7 +31,23 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo()
+    {
+        if(Auth::user()->type_user == "0"){
+            return redirect('/panel/admin');
+        }else if(Auth::user()->type_user == "1"){
+            return redirect('/panel/seminarian');
+        }
+    }
+
+    protected function authenticated()
+    {
+        if(Auth::user()->type_user == 0){
+            return redirect('/panel/admin');
+        }else if(Auth::user()->type_user == 1){
+            return redirect('/panel/seminarian');
+        }
+    }
 
     /**
      * Create a new controller instance.

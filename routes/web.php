@@ -23,12 +23,57 @@ Route::get('/panel/admin',[
     'as' => 'panel-admin',
     'uses' => 'HomeController@panelAdmin']);
 
-Route::get('/panel/admin/seminarians',[
+Route::get('/panel/admin/complaints',[
+    'as' => 'complaints',
+    'uses' => 'ComplaintController@index']);
+
+Route::get('/panel/seminarian',[
+    'as' => 'panel-seminarian',
+    'uses' => 'SeminariansController@index']);
+
+Route::get('/seminarians',[
     'as' => 'seminarians',
     'uses' => 'SeminariansController@index']);
 
 Route::get('/panel/vocational-record/{id}',[
     'as' => 'vocational-record',
     'uses' => 'VocationalRecordController@show']);
+
+Route::get('/delete-seminarian',[
+    'as' => 'delete-seminarian',
+    'uses' => 'SeminariansController@delete']);
+
+Route::get('/panel/my-complaints',[
+    'as' => 'my-complaint',
+    'uses' => 'ComplaintController@myComplaints']);
+
+Route::post('/store-complaint',[
+    'as' => 'store-complaint',
+    'uses' => 'ComplaintController@store']);
+
+Route::get('/store-complaint-visualized/{id}',[
+    'as' => 'store-visualized',
+    'uses' => 'ComplaintController@storeVisualized']);
+
+Route::get('/delete-complaint/{id}',[
+    'as' => 'delete-complaint',
+    'uses' => 'ComplaintController@delete']);
+
+
+Route::get('/attendances/{user_id}',[
+    'as' => 'attendances',
+    'uses' => 'AttendanceController@index']);
+
+Route::post('/store-attendance',[
+    'as' => 'store-attendance',
+    'uses' => 'AttendanceController@store']);
+
+Route::get('/attendance-detail/{id}',[
+    'as' => 'attendance-detail',
+    'uses' => 'AttendanceController@show']);
+
+Route::get('/delete-attendance/{id}',[
+    'as' => 'delete-attendance',
+    'uses' => 'AttendanceController@delete']);
 
 

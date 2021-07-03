@@ -17,4 +17,12 @@ class SeminariansController extends Controller
 
         return view('admin.seminarians', compact($data));
     }
+
+    public function delete(Request $request){
+
+        $seminarian = User::find($request);
+        $seminarian->delete();
+
+        return back();
+    }
 }
