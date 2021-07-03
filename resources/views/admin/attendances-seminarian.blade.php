@@ -32,7 +32,7 @@
                 <tbody>
                     @foreach($attendances as $attendance)
                   <tr>
-                    <td>{{$attendance->date." ".$attendance->hour}}</td>
+                    <td>{{date_format(date_create($attendance->date), 'd/m/y')." ".$attendance->hour}}</td>
                     <td>{{substr($attendance->description, 0, 50)}}</td>
                     <td  class="text-center">
                         <div class="d-flex justify-content-center">

@@ -30,7 +30,7 @@
                     <td>{{$vocational->phone}}</td>
                     <td  class="text-center">
                         <div class="d-flex justify-content-center">
-                            <a href="{{route('store-visualized',['id'=>$seminarian->id])}}"
+                            <a href="{{route('vocational-record',['id'=>$seminarian->id])}}"
                                 class="btn btn-sm btn-warning mr-2">
                                 <i class="now-ui-icons education_paper"></i>
                             </a>

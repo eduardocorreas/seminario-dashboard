@@ -11,7 +11,7 @@ class AttendanceController extends Controller
 {
     public function index(Request $request){
         $data=['attendances', 'seminarian'];
-        $attendances = Attendance::where('user_id','=', $request->user_id)->orderBy('date')->get();
+        $attendances = Attendance::where('user_id','=', $request->user_id)->orderBy('date')->orderBy('hour')->get();
         $seminarian = User::find($request->user_id);
 
         return view('admin.attendances-seminarian', compact($data));
