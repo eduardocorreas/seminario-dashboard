@@ -27,4 +27,8 @@ Route::get('/panel/admin/seminarians',[
     'as' => 'seminarians',
     'uses' => 'SeminariansController@index']);
 
+Route::get('/panel/vocational-record/{id}',[
+    'as' => 'vocational-record',
+    'uses' => 'VocationalRecordController@show']);
+
 

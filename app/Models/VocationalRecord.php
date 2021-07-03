@@ -12,6 +12,7 @@ class VocationalRecord extends Model
     protected $fillable = [
         'user_id',
         'borndate',
+        'phone',
         'address',
         'number',
         'neighborhood',

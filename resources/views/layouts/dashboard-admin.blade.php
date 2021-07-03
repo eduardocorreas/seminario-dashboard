@@ -36,13 +36,13 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class="active ">
-            <a href="./dashboard.html">
+            <a href="{{route('panel-admin')}}">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="{{route('seminarians')}}">
               <i class="now-ui-icons users_single-02"></i>
               <p>Seminaristas</p>
             </a>

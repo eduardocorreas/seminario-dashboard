@@ -8,97 +8,42 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h5 class="card-category">All Persons List</h5>
-            <h4 class="card-title"> Employees Stats</h4>
+            <h4 class="card-title"> Seminaristas</h4>
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
                 <thead class=" text-primary">
                   <th>
-                    Name
+                    Nome
                   </th>
                   <th>
-                    Country
+                    E-mail
                   </th>
                   <th>
-                    City
+                    Telefone
                   </th>
                   <th class="text-right">
-                    Salary
+                    Opções
                   </th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      Dakota Rice
-                    </td>
-                    <td>
-                      Niger
-                    </td>
-                    <td>
-                      Oud-Turnhout
-                    </td>
-                    <td class="text-right">
-                      $36,738
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Minerva Hooper
-                    </td>
-                    <td>
-                      Curaçao
-                    </td>
-                    <td>
-                      Sinaai-Waas
-                    </td>
-                    <td class="text-right">
-                      $23,789
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Sage Rodriguez
-                    </td>
-                    <td>
-                      Netherlands
-                    </td>
-                    <td>
-                      Baileux
-                    </td>
-                    <td class="text-right">
-                      $56,142
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Doris Greene
-                    </td>
-                    <td>
-                      Malawi
-                    </td>
-                    <td>
-                      Feldkirchen in Kärnten
-                    </td>
-                    <td class="text-right">
-                      $63,542
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Mason Porter
-                    </td>
-                    <td>
-                      Chile
-                    </td>
-                    <td>
-                      Gloucester
-                    </td>
-                    <td class="text-right">
-                      $78,615
-                    </td>
-                  </tr>
+                    @foreach ($seminarians as $seminarian)
+                        <tr>
+                            <td>{{$seminarian->name}}</td>
+                            <td>{{$seminarian->email}}</td>
+                            <td>{{$seminarian->phone}}</td>
+                            <td class="text-right">
+                                <a href="{{route('vocational-record',['id'=>$seminarian->id])}}" class="btn btn-sm btn-info">
+                                    <i class="now-ui-icons files_paper"></i>
+                                </a>
+                                <a href="" class="btn btn-sm btn-danger">
+                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+
                 </tbody>
               </table>
             </div>

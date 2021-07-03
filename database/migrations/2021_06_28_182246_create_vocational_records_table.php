@@ -19,6 +19,7 @@ class CreateVocationalRecordsTable extends Migration
 
             $table->string('borndate')->nullable();
             $table->string('postal_code')->nullable();
+            $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('number')->nullable();
             $table->string('neighborhood')->nullable();
