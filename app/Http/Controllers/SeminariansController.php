@@ -12,6 +12,6 @@ class SeminariansController extends Controller
 
         $seminarians = User::where('type_user', '=', 1)->get();
 
-        return view('admin.seminarians', compact($data));
+        return view('seminarian.home', compact($data));
     }
 }

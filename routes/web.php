@@ -23,8 +23,29 @@ Route::get('/panel/admin',[
     'as' => 'panel-admin',
     'uses' => 'HomeController@panelAdmin']);
 
-Route::get('/panel/admin/seminarians',[
-    'as' => 'seminarians',
+Route::get('/panel/admin/complaints',[
+    'as' => 'complaints',
+    'uses' => 'ComplaintController@index']);
+
+Route::get('/panel/seminarian',[
+    'as' => 'panel-seminarian',
     'uses' => 'SeminariansController@index']);
+
+
+Route::get('/panel/my-complaints',[
+    'as' => 'my-complaint',
+    'uses' => 'ComplaintController@myComplaints']);
+
+Route::post('/store-complaint',[
+    'as' => 'store-complaint',
+    'uses' => 'ComplaintController@store']);
+
+Route::get('/store-complaint-visualized/{id}',[
+    'as' => 'store-visualized',
+    'uses' => 'ComplaintController@storeVisualized']);
+
+Route::get('/delete-complaint/{id}',[
+    'as' => 'delete-complaint',
+    'uses' => 'ComplaintController@delete']);
 
 

@@ -18,6 +18,7 @@ class CreateComplaintsTable extends Migration
             $table->integer('user_id');
             $table->text('description');
             $table->integer('type'); // 0 - Aberta / 1 - Anônima
+            $table->integer('visualized'); // 0 - Não / 1 - Sim
             $table->timestamps();
         });
     }

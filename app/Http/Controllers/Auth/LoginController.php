@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -28,19 +29,19 @@ class LoginController extends Controller
      */
     protected function redirectTo()
     {
-        if(Auth::user()->type_user === 0){
+        if(Auth::user()->type_user == "0"){
             return redirect('/panel/admin');
-        }else if(Auth::user()->type_user === 1){
-            return redirect('/panel/seminarista');
+        }else if(Auth::user()->type_user == "1"){
+            return redirect('/panel/seminarian');
         }
     }
 
     protected function authenticated()
     {
-        if(Auth::user()->type_user === 0){
+        if(Auth::user()->type_user == 0){
             return redirect('/panel/admin');
-        }else if(Auth::user()->type_user === 1){
-            return redirect('/panel/seminarista');
+        }else if(Auth::user()->type_user == 1){
+            return redirect('/panel/seminarian');
         }
     }
 

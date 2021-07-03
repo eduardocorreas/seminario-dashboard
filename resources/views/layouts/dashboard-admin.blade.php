@@ -55,7 +55,7 @@
             </a>
           </li>
           <li>
-            <a href="./user.html">
+            <a href="{{route('complaints')}}">
               <i class="now-ui-icons ui-1_bell-53"></i>
               <p>Denúncias</p>
             </a>
