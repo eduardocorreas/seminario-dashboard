@@ -87,26 +87,7 @@
             </nav>
             @yield('content', 'Default content')
 
-            {{-- Footer --}}
-            <footer class="footer">
-                <div class=" container-fluid ">
-                <nav>
-                    <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com">
-                        Seminário São Pio X - Todos os direitos reservados
-                        </a>
-                    </li>
 
-                    </ul>
-                </nav>
-                <div class="copyright" id="copyright">
-                    &copy; <script>
-                    document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                    </script>, Desenvolvido por <a href="https://www.invisionapp.com" target="_blank">Eduardo Corrêa</a>.
-                </div>
-                </div>
-            </footer>
             </div>
         </div>
         <!--   Core JS Files   -->

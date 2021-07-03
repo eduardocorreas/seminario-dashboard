@@ -6,7 +6,7 @@
 </div>
 <div class="content">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
         <div class="card">
             <div class="card-header">
             <h5 class="title">Ficha vocacional</h5>
@@ -84,6 +84,139 @@
                 </div>
 
                 <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label>Nome do pai</label>
+                        <input id="father_name" name="father_name"  type="text" class="form-control" value="{{$vocational->father_name}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label>Profissão do pai</label>
+                        <input id="father_profession" name="father_profession"  type="text" class="form-control" value="{{$vocational->father_profession}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Idade</label>
+                            <input id="father_age" name="father_age" type="number" class="form-control"  value="{{$vocational->father_age}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Está vivo?</label>
+                            <select  class="form-control" name="father_alive">
+                                <option value="1" {{$vocational->father_alive =="0"?"selected":""}}>SIM</option>
+                                <option value="0" {{$vocational->father_alive =="0"?"selected":""}}>NÃO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label>Nome da mãe</label>
+                        <input id="mother_name" name="mother_name"  type="text" class="form-control" value="{{$vocational->mother_name}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label>Profissão da mãe</label>
+                        <input id="mother_profession" name="mother_profession"  type="text" class="form-control" value="{{$vocational->mother_profession}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Idade</label>
+                            <input id="mother_age" name="mother_age" type="number" class="form-control"  value="{{$vocational->mother_age}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Está viva?</label>
+                            <select  class="form-control" name="mother_alive">
+                                <option value="1" {{$vocational->mother_alive =="0"?"selected":""}}>SIM</option>
+                                <option value="0" {{$vocational->mother_alive =="1"?"selected":""}}>NÃO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Quantos irmãos?</label>
+                            <input id="total_brothers" name="total_brothers"  type="number" class="form-control" value="{{$vocational->total_brothers}}">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Quantas irmãs?</label>
+                            <input id="total_sisters" name="total_sisters"  type="number" class="form-control" value="{{$vocational->total_sisters}}">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Situação econômica</label>
+                            <select  class="form-control" name="family_economic_situation">
+                                <option value="0" {{$vocational->family_economic_situation =="0"?"selected":""}}>Insuficiente</option>
+                                <option value="1" {{$vocational->family_economic_situation =="1"?"selected":""}}>Boa</option>
+                                <option value="2" {{$vocational->family_economic_situation =="2"?"selected":""}}>Média</option>
+                                <option value="3" {{$vocational->family_economic_situation =="3"?"selected":""}}>Alta</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Rezam juntos?</label>
+                            <select  class="form-control" name="family_praying_together">
+                                <option value="0" {{$vocational->family_praying_together =="0"?"selected":""}}>Não</option>
+                                <option value="1" {{$vocational->family_praying_together =="0"?"selected":""}}>Sim</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Religião dos pais</label>
+                            <input id="parents_religion" name="parents_religion"  type="text" class="form-control" value="{{$vocational->parents_religion}}">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Batizado</label>
+                            <select  class="form-control" name="baptized">
+                                <option value="0" {{$vocational->baptized =="0"?"selected":""}}>Não</option>
+                                <option value="1" {{$vocational->baptized =="0"?"selected":""}}>Sim</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Fez primeira eucaristia</label>
+                            <select  class="form-control" name="first_eucharist">
+                                <option value="0" {{$vocational->first_eucharist =="0"?"selected":""}}>Não</option>
+                                <option value="1" {{$vocational->first_eucharist =="1"?"selected":""}}>Sim</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Crisma</label>
+                            <select  class="form-control" name="chrism">
+                                <option value="0" {{$vocational->chrims =="0"?"selected":""}}>Não</option>
+                                <option value="1" {{$vocational->chrims =="1"?"selected":""}}>Sim</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                     <label>About Me</label>
@@ -92,39 +225,6 @@
                 </div>
                 </div>
             </form>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-        <div class="card card-user">
-            <div class="image">
-            <img src="../assets/img/bg5.jpg" alt="...">
-            </div>
-            <div class="card-body">
-            <div class="author">
-                <a href="#">
-                <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
-                <h5 class="title">{{$vocational->name}}</h5>
-                </a>
-                <p class="description">
-                    {{$vocational->email}}
-                </p>
-            </div>
-            <p class="description text-center">
-                {{$vocational->phone}}
-            </p>
-            </div>
-            <hr>
-            <div class="button-container">
-            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                <i class="fab fa-facebook-f"></i>
-            </button>
-            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                <i class="fab fa-twitter"></i>
-            </button>
-            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                <i class="fab fa-google-plus-g"></i>
-            </button>
             </div>
         </div>
         </div>
