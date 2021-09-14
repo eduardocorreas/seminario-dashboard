@@ -40,11 +40,11 @@ class RegisterController extends Controller
         }
     }
 
-    protected function authenticated()
+    protected function registered()
     {
-        if(Auth::user()->type_user == 0){
+        if(Auth::user()->type_user == "0"){
             return redirect('/panel/admin');
-        }else if(Auth::user()->type_user == 1){
+        }else if(Auth::user()->type_user == "1"){
             return redirect('/panel/seminarian');
         }
     }
@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'type_user' => ['integer'],
         ]);
     }
 

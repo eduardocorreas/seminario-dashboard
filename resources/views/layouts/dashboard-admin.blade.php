@@ -49,7 +49,7 @@
                 </li>
 
                 <li>
-                    <a href="./notifications.html">
+                    <a href="{{route("seminarian-services")}}">
                     <i class="now-ui-icons design_bullet-list-67"></i>
                     <p>Funções da casa</p>
                     </a>

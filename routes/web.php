@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -90,4 +90,15 @@ Route::post('/update-attendance',[
     'as' => 'update-attendance',
     'uses' => 'AttendanceController@update']);
 
+Route::get('/panel/seminarian-services',[
+    'as' => 'seminarian-services',
+    'uses' => 'UsersServiceController@index']);
+
+Route::post('/panel/seminarian-services',[
+    'as' => 'seminarian-services-store',
+    'uses' => 'UsersServiceController@store']);
+
+Route::get('/seminarian-service-delete/{id}',[
+    'as' => 'seminarian-services-delete',
+    'uses' => 'UsersServiceController@delete']);
 
