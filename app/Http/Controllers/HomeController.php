@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Attendance;
 use App\Models\Complaint;
+use App\Models\UsersService;
 use Auth;
 
 class HomeController extends Controller
@@ -43,9 +44,10 @@ class HomeController extends Controller
 
     public function panelSeminarian()
     {
-        $data =["attendances", "complaints"];
+        $data =["attendances", "complaints", "services"];
         $attendances = Attendance::whereNull('description')->where("user_id", "=", Auth::user()->id)->get();
         $complaints = Complaint::where('visualized', "0")->where("user_id", "=", Auth::user()->id)->orderBy('created_at','desc')->get();
+        $services = UsersService::where('user_id','=', Auth::user()->id)->get();
 
         return view('seminarian.home', compact($data));
     }

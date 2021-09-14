@@ -72,6 +72,36 @@
         </div>
       </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title"> Suas atribuições</h4>
+                </div>
+                <div class="card-body">
+
+            <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>
+                      Serviço/Função
+                    </th>
+                  </thead>
+                  <tbody>
+                      @foreach ($services as $service)
+                      <tr>
+                          <td>
+                              {{$service->service()->name}}
+                          </td>
+                        </tr>
+                      @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
   </div>
 
   @endsection
