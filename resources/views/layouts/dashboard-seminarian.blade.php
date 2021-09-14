@@ -37,10 +37,10 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+          <li>
             <a href="{{route('panel-seminarian')}}">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <p>Início</p>
             </a>
           </li>
 
@@ -58,14 +58,11 @@
             </a>
           </li>
           <li>
-            <form action="{{route('logout')}}" method="post">
-                @csrf
-                <button type="submit" class="btn btn-link">
-                  <i class="now-ui-icons arrows-1_minimal-left"></i>
-                  <p style="color: #fff">SAIR</p>
-                </button>
-            </form>
-          </li>
+            <a href="{{route("logout")}}">
+                <i class="now-ui-icons arrows-1_minimal-left"></i>
+                <p>Sair</p>
+            </a>
+        </li>
 
         </ul>
       </div>

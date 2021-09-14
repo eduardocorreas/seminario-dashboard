@@ -4,6 +4,33 @@
 <div class="panel-header panel-header-sm">
 </div>
 <div class="content">
+    <div class="d-flex justify-content-between">
+        <div class="card ml-2 mr-2">
+            <div class="card-body">
+                <h1 class="text-primary"><b>{{$totalSeminarians}}</b></h1>
+            </div>
+            <div class="card-footer">
+                Total de seminaristas
+            </div>
+        </div>
+        <div class="card ml-2 mr-2">
+            <div class="card-body">
+                <h1 class="text-primary"><b>{{$totalAttendances}}</b></h1>
+            </div>
+            <div class="card-footer">
+                Acompanhamentos marcados
+            </div>
+        </div>
+        <div class="card ml-2 mr-2">
+            <div class="card-body">
+                <h1 class="text-primary"><b>{{$totalComplaints}}</b></h1>
+            </div>
+            <div class="card-footer">
+                Denúncias não visualizadas
+            </div>
+        </div>
+
+    </div>
     <div class="row mt-20">
       <div class="col-md-6">
         <div class="card">

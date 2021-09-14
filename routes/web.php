@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Auth::routes();
 
 Route::get('/panel/admin',[

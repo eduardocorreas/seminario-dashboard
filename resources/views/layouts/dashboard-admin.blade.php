@@ -26,10 +26,10 @@
                 Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
             -->
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                <a href="{{route("panel-admin")}}" class="simple-text logo-mini">
                 Olá,
                 </a>
-                <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                <a href="{{route("panel-admin")}}" class="simple-text logo-normal">
                 {{Auth::user()->name}}
                 </a>
             </div>
@@ -38,7 +38,7 @@
                 <li>
                     <a href="{{route('panel-admin')}}">
                     <i class="now-ui-icons design_app"></i>
-                    <p>Dashboard</p>
+                    <p>Início</p>
                     </a>
                 </li>
                 <li>
@@ -58,6 +58,13 @@
                     <a href="{{route('complaints')}}">
                     <i class="now-ui-icons ui-1_bell-53"></i>
                     <p>Denúncias</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route("logout")}}">
+                        <i class="now-ui-icons arrows-1_minimal-left"></i>
+                        <p>Sair</p>
                     </a>
                 </li>
 

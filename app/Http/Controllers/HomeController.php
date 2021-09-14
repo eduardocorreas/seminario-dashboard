@@ -27,9 +27,16 @@ class HomeController extends Controller
      */
     public function panelAdmin()
     {
-        $data =["attendances", "complaints"];
+        $data =["attendances", "complaints", "totalSeminarians", "totalAttendances", "totalComplaints"];
+        $totalSeminarians = User::where('type_user', 1)->count();
+
+        $allAttendances = Attendance::whereNull('description');
+        $totalAttendances = $allAttendances->count();
         $attendances = Attendance::whereNull('description')->get();
-        $complaints = Complaint::where('visualized', "0")->orderBy('created_at','desc')->limit(5)->get();
+
+        $allComplaints = Complaint::where('visualized', "0");
+        $totalComplaints = $allComplaints->count();
+        $complaints = $allComplaints->orderBy('created_at','desc')->limit(5)->get();
 
         return view('admin.home', compact($data));
     }

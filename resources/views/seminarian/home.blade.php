@@ -16,7 +16,6 @@
                   <thead  class=" text-primary">
                       <th>Nome</th>
                       <th>Horário</th>
-                      <th></th>
                   </thead>
                 <tbody>
                     @foreach ($attendances as $attendance)
@@ -30,9 +29,6 @@
                                    $format = $date->format('d/m/Y');
                                 @endphp
                                 {{$format." - ".$attendance->hour}}
-                            </td>
-                            <td>
-                                <a href="{{route("attendance-detail",[$attendance->id])}}" class="btn btn-sm btn-primary text-white"><i class="fa fa-eye"></i></a>
                             </td>
                         </tr>
                     @endforeach
@@ -66,12 +62,6 @@
                         </td>
                         <td>
                             {{$complaint->description}}
-                        </td>
-                        <td>
-                            <a href="{{route('store-visualized',['id'=>$complaint->id])}}"
-                                class="btn btn-sm btn-primary">
-                                <i class="now-ui-icons ui-1_check"></i>
-                            </a>
                         </td>
                       </tr>
                     @endforeach
