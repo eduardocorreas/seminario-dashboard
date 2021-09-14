@@ -16,7 +16,7 @@ class CreateAttendancesTable extends Migration
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('date');
             $table->string('hour');
             $table->timestamps();

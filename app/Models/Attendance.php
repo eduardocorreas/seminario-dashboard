@@ -14,4 +14,8 @@ class Attendance extends Model
         'date',
         'hour'
     ];
+
+    public function user(){
+        return User::find($this->user_id);
+    }
 }

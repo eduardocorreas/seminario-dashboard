@@ -29,7 +29,7 @@ Route::get('/panel/admin/complaints',[
 
 Route::get('/panel/seminarian',[
     'as' => 'panel-seminarian',
-    'uses' => 'SeminariansController@index']);
+    'uses' => 'HomeController@panelSeminarian']);
 
 Route::get('/seminarians',[
     'as' => 'seminarians',
@@ -38,6 +38,14 @@ Route::get('/seminarians',[
 Route::get('/panel/vocational-record/{id}',[
     'as' => 'vocational-record',
     'uses' => 'VocationalRecordController@show']);
+
+Route::get('/panel/my-vocational-record',[
+    'as' => 'my-vocational-record',
+    'uses' => 'VocationalRecordController@myVocationalRecord']);
+
+Route::post('/panel/vocational-record',[
+    'as' => 'vocational-record-update',
+    'uses' => 'VocationalRecordController@update']);
 
 Route::get('/delete-seminarian',[
     'as' => 'delete-seminarian',
@@ -75,5 +83,9 @@ Route::get('/attendance-detail/{id}',[
 Route::get('/delete-attendance/{id}',[
     'as' => 'delete-attendance',
     'uses' => 'AttendanceController@delete']);
+
+Route::post('/update-attendance',[
+    'as' => 'update-attendance',
+    'uses' => 'AttendanceController@update']);
 
 

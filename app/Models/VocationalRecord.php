@@ -14,6 +14,7 @@ class VocationalRecord extends Model
         'phone',
         'borndate',
         'phone',
+        'postal_code',
         'address',
         'number',
         'neighborhood',

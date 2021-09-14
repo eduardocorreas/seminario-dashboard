@@ -14,4 +14,8 @@ class Complaint extends Model
         'type',
         'visualized',
     ];
+
+    public function user(){
+        return User::find($this->user_id);
+    }
 }

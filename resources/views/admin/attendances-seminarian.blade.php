@@ -12,11 +12,8 @@
               <h4 class="card-title">Acompanhamentos de {{$seminarian->name}}</h4>
             <!-- Button trigger modal -->
             <div>
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
-                    Agendar
-                </button>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Iniciar agora
+                   <i class="fa fa-plus mr-2"></i> Novo
                 </button>
             </div>
           </div>
@@ -33,7 +30,7 @@
                     @foreach($attendances as $attendance)
                   <tr>
                     <td>{{date_format(date_create($attendance->date), 'd/m/y')." ".$attendance->hour}}</td>
-                    <td>{{substr($attendance->description, 0, 50)}}</td>
+                    <td>{{substr(strip_tags($attendance->description), 0, 50)}}</td>
                     <td  class="text-center">
                         <div class="d-flex justify-content-center">
                             <a href="{{route('attendance-detail',['id'=>$attendance->id])}}"
@@ -89,7 +86,7 @@
             <input type="hidden" name="user_id" id="user_id" value="{{$seminarian->id}}">
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
             </div>
         </form>
     </div>

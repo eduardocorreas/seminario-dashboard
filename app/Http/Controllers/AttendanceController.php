@@ -46,8 +46,9 @@ class AttendanceController extends Controller
 
     public function show(Request $request)
     {
-        $data = ["attendance"];
+        $data = ["attendance", "seminarian"];
         $attendance = Attendance::find($request->id);
+        $seminarian = User::find($attendance->user_id);
         return view('admin.attendance-detail', compact($data));
     }
 
@@ -56,6 +57,13 @@ class AttendanceController extends Controller
         $attendance = Attendance::find($request->id);
         $attendance->description = $request->description;
         $attendance->save();
+
+        return redirect("/attendances/".$attendance->user_id);
+    }
+
+    public function delete($id){
+        $attendance = Attendance::find($id);
+        $attendance->delete();
 
         return back();
     }

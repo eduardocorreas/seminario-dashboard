@@ -19,6 +19,8 @@
   <link href="{{asset('demo/demo.css')}}" rel="stylesheet" />
 </head>
 
+@inject('vocationalRecord', 'App\Models\VocationalRecord')
+
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="orange">
@@ -50,9 +52,9 @@
           </li>
 
           <li>
-            <a href="./user.html">
+            <a href="{{route('my-vocational-record')}}">
               <i class="now-ui-icons ui-2_chat-round"></i>
-              <p>Meus acompanhamentos</p>
+              <p>Ficha Vocacional</p>
             </a>
           </li>
           <li>
